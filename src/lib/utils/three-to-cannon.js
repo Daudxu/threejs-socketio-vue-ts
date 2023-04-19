@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import * as CANNON from 'cannon';
+import * as CANNON from 'cannon-es';
 import { quickhull } from './THREE.quickhull';
 
 var PI_2 = Math.PI / 2;

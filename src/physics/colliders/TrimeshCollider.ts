@@ -1,9 +1,9 @@
-import * as CANNON from 'cannon';
+import * as CANNON from 'cannon-es';
 import * as THREE from 'three';
 import * as Utils from '../../core/FunctionLibrary';
 import {ICollider} from '../../interfaces/ICollider';
 import {Object3D} from 'three';
-import { threeToCannon } from '../../../lib/utils/three-to-cannon';
+import { threeToCannon } from '../../lib/utils/three-to-cannon';
 
 export class TrimeshCollider implements ICollider
 {

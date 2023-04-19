@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import * as CANNON from 'cannon';
+import * as CANNON from 'cannon-es';
 import Swal from 'sweetalert2';
 import * as $ from 'jquery';
 
@@ -9,10 +9,10 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass';
 import { FXAAShader  } from 'three/examples/jsm/shaders/FXAAShader';
 
-import { Detector } from '../../lib/utils/Detector';
-import { Stats } from '../../lib/utils/Stats';
-import * as GUI from '../../lib/utils/dat.gui';
-import { CannonDebugRenderer } from '../../lib/cannon/CannonDebugRenderer';
+import { Detector } from '../lib/utils/Detector';
+import { Stats } from '../lib/utils/Stats';
+import * as GUI from '../lib/utils/dat.gui';
+import { CannonDebugRenderer } from '../lib/cannon/CannonDebugRenderer';
 import * as _ from 'lodash';
 
 import { InputManager } from '../core/InputManager';

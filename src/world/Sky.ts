@@ -1,4 +1,4 @@
-import { SkyShader } from '../../lib/shaders/SkyShader';
+import { SkyShader } from '../lib/shaders/SkyShader';
 import * as THREE from 'three';
 import { World } from './World';
 import { EntityType } from '../enums/EntityType';
