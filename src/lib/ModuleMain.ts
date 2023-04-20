@@ -3,7 +3,14 @@ import PlayerController from './modules/controller/PlayerController'
 import {LoadResources} from './modules/loadResources/LoadResources'
 
 export default class ModuleMain extends BaseMain {
-  constructor(container, config) {
+  public domElement: any
+  public config: any
+  public playerModel: any
+  public terrainModel: any
+  public controlRole: any
+
+
+  constructor(container: any, config: any) {
     super(container)
     this.domElement = this.render.renderer.domElement
     this.config = config
@@ -31,26 +38,10 @@ export default class ModuleMain extends BaseMain {
   }
 
   initMouseMove() {
-    let that = this
     document.documentElement.oncontextmenu = () => {
       return false;
     };
-    window.onmousedown = function (ev) {
-      if (ev.button == 2) {
-        ev.cancelBubble = true
-        ev.returnvalue = false;
-        document.onmousemove = (ev) => {
-          that.controlRole.handleMouseMove(ev, ev.movementX, ev.movementY);
-        }
-        document.onmouseup = (ev) => {
-          document.onmousemove = null
-          document.onmouseup = null
-        }
-      }
-    };
-    window.onmousewheel = function (e) {
-      that.controlRole.handleOnmouseWheel(e)
-    }
+
   }
 
   initAnimate = () => {

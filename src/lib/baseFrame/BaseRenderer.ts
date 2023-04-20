@@ -1,7 +1,9 @@
 import * as THREE from 'three';
 
 export default class BaseRenderer {
-  constructor(container) {
+  public renderer: any;
+  public container: any;
+  constructor(container: any) {
     this.container = container;
     this.initRenderer(container)
   }
@@ -9,7 +11,7 @@ export default class BaseRenderer {
   /**
    * 初始化场景
    */
-  initRenderer(container) {
+  initRenderer(container: any): void {
     this.renderer = new THREE.WebGLRenderer({antialias: true});
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
     this.renderer.setSize(container.clientWidth, container.clientHeight);//设置渲染区域尺寸

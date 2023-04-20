@@ -27,21 +27,14 @@ const clock = new THREE.Clock();
 
 
 let player = new THREE.Group()//角色
-let ball = new THREE.Vector3()//保存点击坐标
 
-let distVec; //距离
-let targetVecNorm;
-let colliders = []
+
 
 //动画
-let mixers = []
-let action
-let tween
-let labelRenderer
-const runVelocity = 5
-const walkVelocity = 2
+let mixers: any = []
 
-let directionOffset, directionOffseta
+let directionOffset
+let directionOffseta
 export default class PlayerController {
 
    updateOrder = 1;
