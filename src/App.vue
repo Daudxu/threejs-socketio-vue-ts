@@ -8,7 +8,7 @@ import { EffectCards } from 'swiper';
 import 'swiper/css/effect-cards';
 import 'swiper/css';
 import Store from './store/index.js'
-import { World } from './start.ts'
+// import { World } from './start.ts'
 
 const Pinia  = Store()
 const socket = io('ws://localhost:3000');
@@ -92,7 +92,7 @@ const joinRoom = (userName: string) => {
 }
 // 初始化角色
 const initThree = (socket: any) => {
-  const world = new World("./12.glb");
+  // const world = new World("./12.glb");
     // const containerObj = container.value
     // let config={
     //   playerName:name.value,
